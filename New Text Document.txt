@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCpqv9MH85KjKuZDJ89VH5mpmjrSsKb_JE&libraries=places"></script>
+</head>
+<body>
+
+<div class="body_wrapper">
+	<div class="body">
+    	<div class="body_left">
+        	<nav>
+   				<ul>
+				   <li><a href="index.php" class="current">Home</a></li>
+				   <li><a href="login.php">Log In</a></li>
+				   <li><a href="signup.php">Sign Up</a></li>
+				</ul>
+   			</nav>
+    	</div>
+    	<div class="body_right">
+    		
+    	</div>
+        <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+        google.maps.event.addListener(map, 'click', function(event) {
+		   placeMarker(event.latLng);
+		});
+		var count = 1;
+		function placeMarker(location) {
+	        if(count <= 2) {
+			    var marker = new google.maps.Marker({
+			        position: location, 
+			        map: map
+			    });
+			}
+			count = count + 1;
+		}
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpqv9MH85KjKuZDJ89VH5mpmjrSsKb_JE&callback=initMap"
+    async defer></script>
+    </div>
+</div>	
+</body>
+</html>

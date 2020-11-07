@@ -1,0 +1,40 @@
+<style>
+	#map-canvas{
+		width: 400px;
+		height: 400 px;
+	}
+</style>
+
+<div id ="map-canvas"></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>	
+	var map= new google.maps.Map(document.getElementById('map-canvas'),{
+		center:{
+			lat : 27.72,
+			lng : 85.36
+		},
+		zoom : 15
+
+	});
+
+	var marker = new google.maps.Marker({
+		position:{
+			lat : 27.72,
+			lng : 85.36
+		},
+		map: map,
+		draggable: true
+	});
+	google.maps.event.addListener(marker,'dragend',function(){
+		console.log(marker.getPosition().lat());
+	});
+
+
+</script>
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCpqv9MH85KjKuZDJ89VH5mpmjrSsKb_JE"></script>
+

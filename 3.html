@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html {  height: 100%; }
+        
+        #map_canvas { 
+        height: 400px;
+          width: 1160px;}
+    </style>
+    <script type="text/javascript">
+        function initialize() {
+            var latlng = new google.maps.LatLng(23.777176, 90.399452);
+            var myOptions = {
+                zoom: 18,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+            var marker = new google.maps.Marker({
+        position:{
+            lat : 23.777176,
+            lng :  90.399452
+        },
+        map: map,
+        draggable: true
+    });
+    google.maps.event.addListener(marker,'dragend',function(){
+        console.log(marker.getPosition().lat());
+    });
+        }
+        var myKey = "AIzaSyCpqv9MH85KjKuZDJ89VH5mpmjrSsKb_JE";
+        function loadScript() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=false&callback=initialize";
+            document.body.appendChild(script);
+        }
+    </script>
+</head>
+<body onload="loadScript()">
+<div class="body_wrapper">
+    <div class="body">
+      <div class="body_left">
+            <nav>
+                <ul>
+                   <li><a href="index.php" class="current">Home</a></li>
+                   <li><a href="login.php">Log In</a></li>
+                   <li><a href="signup.php">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    <div id="map_canvas" >
+    </div>
+    </div>
+</body>
+</html>

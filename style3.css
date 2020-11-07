@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 12px;
+    color: #666;
+    background: #ffffff;
+}
+
+/*head start*/
+.header_wrapper {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    background: #fff;
+}
+.header{
+    width: 100%;
+    height: 150px;
+    background: #fff url("img/hd.jpg") no-repeat;
+}
+ .header .logo {
+    float: left;
+    width: 600px;
+    height: 140px;
+    font-size: 40px;
+    background: #fff url("img/logo.jpg") no-repeat;
+}
+ .header .s {
+    float: right;
+    width: 150px;
+    height: 80px;
+    font-size: 40px;
+    background: #fff;
+    
+    padding-top: 40px;
+    padding-right: 100px;
+}
+.header .s a{
+    font-size: 30px;
+    color: #2E8B57;
+    text-transform:capitalize;
+    font-weight:normal;
+    display:block;  /* IE6, IE7 line height fix */
+    padding-bottom:8px;
+    padding-top:15px;
+    margin-top:0px;
+    margin-right:6px;
+    text-decoration:none;
+}
+
+#body_wrapper {
+    width: 100%;
+    height: 800px;
+    background: #fff;
+}
+#body{
+    width: 1367px;
+    height: 800px;
+    background: #F8F8FF;
+}
+#body_left{
+    float: left;
+    width: 200px;
+    height:800px;
+    background: #F8F8FF;
+}
+nav{
+    position:relative;
+    width:200px;
+    height: 800px;
+    padding-top:45px;
+    right:0;
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+nav ul li{
+    
+    margin-left:20px;
+    line-height:normal;
+}
+
+nav ul li a{
+    font-size: 20px;
+    font-family:Georgia, "Times New Roman", Times, serif;
+    color: #000;
+    text-transform:capitalize;
+    font-weight:normal;
+    display:block;  /* IE6, IE7 line height fix */
+    padding-bottom:8px;
+    padding-top:15px;
+    margin-top:0px;
+    margin-right:6px;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    color: #2E8B57;
+    font-size: 200%;
+    text-decoration:underline;
+}
+
+nav ul li a.active{
+    color:#90EE90;
+    padding:15px;
+    font-size: 150%;
+}
+#body_right{
+    width: 600px;
+    height:800px;
+    background: #000 url("img/signup.jpg");
+    float: left;
+    border-radius: .5em;
+    margin-left: 200px;
+}
+
+/*footer start*/
+
+.footer_wrapper{
+
+    width: 100%;
+    height: 100px;
+    background: #fff;
+}
+.footer{
+
+    width: 1020px;
+    height: 100px;
+    margin: 0 auto
+}
+.footer_left{
+
+    width: 1020px;
+    height: 100px;
+    color: #000;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+
+/*footer end*/
